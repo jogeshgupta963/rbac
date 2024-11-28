@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "4554a595-6a48-42e4-8bd6-f9e5bc666821",
+		"name": "rbac",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17180665",
+		"_collection_link": "https://warped-rocket-408603.postman.co/workspace/My-Workspace~09f6a9bd-59b5-49c2-864e-a34fbd328147/collection/17180665-4554a595-6a48-42e4-8bd6-f9e5bc666821?action=share&source=collection_link&creator=17180665"
+	},
+	"item": [
+		{
+			"name": "profile",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3001/api/profile"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3001/api/profile"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "localhost:3001/api/profile"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:3001/api/profile"
+					},
+					"response": []
+				},
+				{
+					"name": "getbyid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3001/api/profile/123"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:3001/api/profile/123"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3001/api/product"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3001/api/product"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "localhost:3001/api/product"
+					},
+					"response": []
+				},
+				{
+					"name": "getbyid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3001/api/product/123"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:3001/api/profile/123"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Jogesh\",\r\n    \"email\":\"jogeshgugsass@gmail.com\",\r\n    \"password\":\"zxcvbnm\",\r\n    \"role\":\"674845cdd333dacce9fda365\" \r\n}\r\n// {\r\n//     \"name\":\"USER\",\r\n//     \"permission\":{\r\n//         \"GET\":[\"get_profile\",\"get_product\"],\r\n//         \"POST\":[\"create_profile\"],\r\n//         \"PUT\":[\"update_profile\"],\r\n//         \"DELETE\":[]\r\n//     }\r\n// }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3001/api/auth/signup"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"jogeshgugsass@gmail.com\",\r\n    \"password\":\"zxcvbnm\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3001/api/auth/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "roles and user",
+			"item": [
+				{
+					"name": "create role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ADMIN\",\r\n    \"permissions\":{\r\n        \"GET\":[\"get_product\",\"get_profile\",\"get_user\"],\r\n        \"POST\":[\"create_profile\",\"create_product\",\"create_role\"],\r\n        \"PUT\":[\"update_profile\",\"update_product\",\"assign_role\",\"update_settings\"],\r\n        \"DELETE\":[\"delete_profile\",\"delete_product\"]\r\n    }\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3001/api/user/role/"
+					},
+					"response": []
+				},
+				{
+					"name": "assign role",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"6748415c22e1bb86978c5786\",\r\n    \"roleId\":\"6748369221150f9648e73b52\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3001/api/user/role/"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3001/api/user/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "settings",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "localhost:3001/api/settings/global"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
